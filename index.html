@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    >
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
+    >
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <title>Hotel | Form</title>
+  </head>
+  <body>
+    <div
+      class = "container-fluid"
+      style = 
+      "display: flex;
+       justify-content: space-evenly;
+       flex-wrap: wrap-reverse;
+       align-items: center;"
+    >
+
+    <!--- Explaining what this is --->
+    <div class = "info-container">
+      <h1>Hotel Booking</h1><br>
+      <br>
+      <p>Want to stay in a beautiful 5 star hotel for cheap? Just fill
+        out this form and you too could stay here a few nights. All we 
+        need is you to fill out this form pls.
+      </p>
+    </div>
+
+<!--- Signup form --->
+    <div class = "container-form">
+      <h1>Sign up!</h1>
+      <form>
+
+        <!--- Basic info gathering --->
+        <label for="fname"><b>First name:</b></label><br>
+        <input type="text" id="fname" name="fname" placeholder="Jane"><br>
+
+        <label for="lname"><b>Last name:</b></label><br>
+        <input type="text" id="lname" name="lname"placeholder="Doe"><br>
+
+        <label for="email"><b>Email Address:</b></label><br>
+        <input type="email" id="email" name="email" placeholder="hotel@hotel.com"><br>
+
+        <label for ="ccard"><b>Credit Card:</b></label><br>
+        <input type="text" id="ccard" name="ccard"placeholder="xxxx-xxxx-xxxx-xxxx"><br>
+        <br>
+
+        <!--- Fun radio stuffs for picking room type --->
+          <p><b>What type of room would you like?:</b></p>
+          <input type="radio" id="room1" name="rooms" value="1bed">
+          <label for="room1">1 bed</label><br>
+          <input type="radio" id="room2" name="rooms" value="2bed">
+          <label for="room2">2 bed</label><br>
+          <input type="radio" id="room3" name="rooms" value="suite">
+          <label for="room3">Suite</label>
+        
+          <br> 
+
+
+        <!--- Fun checkbox stuffs for picking breakfast --->
+        <label for = "breakfast"><b>What would you like for breakfast?</b></label><br>
+        <input type="checkbox" id="item1" name="item1" value="egg">
+        <label for="item1"> Eggs</label><br>
+        <input type="checkbox" id="item2" name="item2" value="bacon">
+        <label for="item2"> Bacon</label><br>
+        <input type="checkbox" id="item3" name="item3" value="pancake">
+        <label for="item3"> Pancakes</label><br>
+        <br>
+
+        <!--- Dropdown for if you want room service --->
+        <label for="service"><b>Do you want room service??:</b></label>
+        <select name="service" id="service">
+          <option value="blank"> </option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select><br>
+        <p></p>
+
+        <!--- Cool calendar selector. --->
+        <label for="date"><b>Select a date for your stay:</b></label>
+        <form action="/action_page.php"><br>
+          <input type="date" id="date" name="date">
+        </form><br>
+        <br>
+
+        <!--- dropdown for check-in time --->
+        <label for="time"><b>Pick a check-in time:</b></label>
+        <select name="time" id="time">
+          <option value="blank"> </option>
+          <option value="9">9 AM</option>
+          <option value="10">10 AM</option>
+          <option value="11">11 AM</option>
+          <option value="12">12 AM</option>
+          <option value="1">1 PM</option>
+          <option value="2">2 PM</option>
+          <option value="3">3 PM</option>
+        </select><br>
+        <br>
+
+        <!--- Buttons for control --->
+        <input type="submit" value="Submit"><br><br>
+        <li class="navitem">
+         <button id="btnLoadData" class="btn btn-secondary">load json</button>
+        </li>
+        <br>
+        <p id = formOutput></p>
+      </form>
+    </div>
+
+    <div class="footer">
+      <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Falmostheaven52.github.io%2FHotel-form%2F" target="_blank">Check my validity!</a>
+      <a href="https://github.com/Almostheaven52/Hotel-form" target="_blank">Check my repo!</a>
+    </div>
+
+  </body>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+      integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/ajax.js"></script>
+  </body>
+</html>
