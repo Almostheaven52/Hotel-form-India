@@ -1,5 +1,4 @@
 $(function () {
-  //regular expression of only letters
 
 
 
